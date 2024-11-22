@@ -1,128 +1,552 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GCash Payment</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Examples</title>
+  <style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(45deg, #1e2a47, #4a6ff1);
-            color: #fff;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            text-align: center;
-        }
+  h1,
+  h2 {
+    color: #333;
+  }
 
-        .payment-container {
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            max-width: 400px;
-            width: 100%;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+  pre {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 4px;
+    overflow-x: auto;
+    user-select: none;
+    /* Prevent text selection */
+  }
 
-        .payment-container:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-        }
+  code {
+    font-family: Consolas, Monaco, monospace;
+  }
 
-        h1 {
-            color: #fff;
-            font-size: 32px;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-        }
+  .example {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
 
-        .payment-details {
-            font-size: 20px;
-            color: #f5f5f5;
-            margin-bottom: 10px;
-        }
-
-        .qr-code img {
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            transition: transform 0.2s ease;
-        }
-
-        .qr-code img:hover {
-            transform: scale(1.05);
-        }
-
-        .amount {
-            font-size: 24px;
-            font-weight: bold;
-            color: #ffcc00;
-            margin-top: 15px;
-        }
-
-        .note {
-            color: #bbb;
-            font-size: 14px;
-            margin-top: 25px;
-        }
-
-        .note a {
-            color: #ffcc00;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .note a:hover {
-            color: #ffffff;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 600px) {
-            .payment-container {
-                width: 90%;
-                padding: 30px;
-            }
-
-            h1 {
-                font-size: 28px;
-            }
-
-            .payment-details {
-                font-size: 18px;
-            }
-
-            .amount {
-                font-size: 20px;
-            }
-        }
-    </style>
+  .no-select {
+    user-select: none;
+    /* Prevent text selection */
+  }
+  </style>
 </head>
+
 <body>
+  <a href="home.php">back</a>
+  <h1>Basic Python Code Examples</h1>
 
-    <div class="payment-container">
-        <h1>Pay with GCash</h1>
-        <p class="payment-details">Scan the QR code below to complete your payment using GCash.</p>
+  <h2>Hello World</h2>
+  <p>This is the most basic Python program that prints "Hello, World!" to the console.</p>
+  <pre><code class="no-select">print("Hello, World!")</code></pre>
 
-        <!-- QR Code (Replace with your actual QR code URL) -->
-        <div class="qr-code">
-            <img src="cashmein.jpg" alt="GCash QR Code" width="250" height="250">
-        </div>
+  <h2>Basic Arithmetic</h2>
+  <p>Here are examples of basic arithmetic operations in Python.</p>
+  <pre><code class="no-select"># Addition
+a = 5
+b = 3
+sum = a + b
+print("Sum:", sum)
 
-        <p class="amount">Amount: PHP 49.00</p>
+# Multiplication
+product = a * b
+print("Product:", product)</code></pre>
 
-        <div class="note">
-            <p>Please scan the QR code with your GCash app to pay.</p>
-            <p>If you encounter any issues, <a href="mailto:support@yourcompany.com">contact customer support</a>.</p>
-        </div>
+  <h2>Conditional Statements</h2>
+  <p>This code snippet demonstrates how to use conditional statements to check if a number is positive, negative, or
+    zero.</p>
+  <pre><code class="no-select">number = 10
+
+if number > 0:
+    print("The number is positive.")
+elif number < 0:
+    print("The number is negative.")
+else:
+    print("The number is zero.")</code></pre>
+
+  <h2>Loops</h2>
+  <p>Examples of <code>for</code> and <code>while</code> loops in Python.</p>
+  <h3>For Loop</h3>
+  <pre><code class="no-select">for i in range(5):
+    print("Iteration:", i)</code></pre>
+
+  <h3>While Loop</h3>
+  <pre><code class="no-select">count = 0
+while count < 5:
+    print("Count:", count)
+    count += 1</code></pre>
+
+  <h2>Functions</h2>
+  <p>Here's an example of a simple function that returns a greeting message.</p>
+  <pre><code class="no-select">def greet(name):
+    return f"Hello, {name}!"
+
+print(greet("Alice"))</code></pre>
+
+  <h2>Lists</h2>
+  <p>This example shows how to work with lists in Python, including accessing elements, adding new items, and looping
+    through the list.</p>
+  <pre><code class="no-select">fruits = ["apple", "banana", "cherry"]
+
+# Accessing elements
+print(fruits[0])  # Outputs: apple
+
+# Adding elements
+fruits.append("orange")
+print(fruits)
+
+# Looping through a list
+for fruit in fruits:
+    print(fruit)</code></pre>
+
+  <h2>Dictionaries</h2>
+  <p>Here's how to use dictionaries in Python, including accessing values, adding new key-value pairs, and looping
+    through the dictionary.</p>
+  <pre><code class="no-select">person = {
+    "name": "John",
+    "age": 30,
+    "city": "New York"
+}
+
+# Accessing values
+print(person["name"])
+
+# Adding a new key-value pair
+person["job"] = "Engineer"
+print(person)
+
+# Looping through a dictionary
+for key, value in person.items():
+    print(f"{key}: {value}")</code></pre>
+
+  <h1>Basic Java Code Examples</h1>
+
+  <h2>Hello World</h2>
+  <p>This is the most basic Java program that prints "Hello, World!" to the console.</p>
+  <pre><code class="no-select">public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}</code></pre>
+
+  <h2>Basic Arithmetic</h2>
+  <p>Here are examples of basic arithmetic operations in Java.</p>
+  <pre><code class="no-select">public class BasicArithmetic {
+    public static void main(String[] args) {
+        int a = 5;
+        int b = 3;
+
+        // Addition
+        int sum = a + b;
+        System.out.println("Sum: " + sum);
+
+        // Multiplication
+        int product = a * b;
+        System.out.println("Product: " + product);
+    }
+}</code></pre>
+
+  <h2>Conditional Statements</h2>
+  <p>This code snippet demonstrates how to use conditional statements to check if a number is positive, negative, or
+    zero.</p>
+  <pre><code class="no-select">public class ConditionalStatements {
+    public static void main(String[] args) {
+        int number = 10;
+
+        if (number > 0) {
+            System.out.println("The number is positive.");
+        } else if (number < 0) {
+            System.out.println("The number is negative.");
+        } else {
+            System.out.println("The number is zero.");
+        }
+    }
+}</code></pre>
+
+  <h2>Loops</h2>
+  <p>Examples of <code>for</code> and <code>while</code> loops in Java.</p>
+  <h3>For Loop</h3>
+  <pre><code class="no-select">public class ForLoopExample {
+    public static void main(String[] args) {
+        for (int i = 0; i &lt; 5; i++) {
+            System.out.println("Iteration: " + i);
+        }
+    }
+}</code></pre>
+
+  <h3>While Loop</h3>
+  <pre><code class="no-select">public class WhileLoopExample {
+    public static void main(String[] args) {
+        int count = 0;
+        while (count &lt; 5) {
+            System.out.println("Count: " + count);
+            count++;
+        }
+    }
+}</code></pre>
+
+  <h2>Methods</h2>
+  <p>Here's an example of a simple method that returns a greeting message.</p>
+  <pre><code class="no-select">public class Greeting {
+    public static void main(String[] args) {
+        System.out.println(greet("Alice"));
+    }
+
+    public static String greet(String name) {
+        return "Hello, " + name + "!";
+    }
+}</code></pre>
+
+  <h2>Arrays</h2>
+  <p>This example shows how to work with arrays in Java, including accessing elements, adding new items (by creating a
+    new array), and looping through the array.</p>
+  <pre><code class="no-select">public class ArrayExample {
+    public static void main(String[] args) {
+        String[] fruits = {"apple", "banana", "cherry"};
+
+        // Accessing elements
+        System.out.println(fruits[0]);  // Outputs: apple
+
+        // Adding elements (by creating a new array)
+        fruits = java.util.Arrays.copyOf(fruits, fruits.length + 1);
+        fruits[fruits.length - 1] = "orange";
+        for (String fruit : fruits) {
+            System.out.println(fruit);
+        }
+    }
+}</code></pre>
+
+  <h2>HashMaps</h2>
+  <p>Here's how to use <code>HashMap</code> in Java, including accessing values, adding new key-value pairs, and looping
+    through the map.</p>
+  <pre><code class="no-select">import java.util.HashMap;
+
+public class HashMapExample {
+    public static void main(String[] args) {
+        HashMap<String, Object> person = new HashMap<>();
+        person.put("name", "John");
+        person.put("age", 30);
+        person.put("city", "New York");
+
+        // Accessing values
+        System.out.println(person.get("name"));
+
+        // Adding a new key-value pair
+        person.put("job", "Engineer");
+        System.out.println(person);
+
+        // Looping through a HashMap
+        for (String key : person.keySet()) {
+            System.out.println(key + ": " + person.get(key));
+        }
+    }
+}</code></pre>
+
+  <h1>Basic CSS Code Examples</h1>
+
+  <div class="code-container">
+    <h2>Text Color and Font</h2>
+    <p>This example demonstrates how to change text color and font family.</p>
+    <pre><code class="no-select">/* CSS */
+p {
+    color: #555;
+    font-family: 'Courier New', Courier, monospace;
+}
+</code></pre>
+    <div class="example">
+      <p style="color: #555; font-family: 'Courier New', Courier, monospace;">
+        This is an example of text with changed color and font.
+      </p>
     </div>
+  </div>
 
+  <div class="code-container">
+    <h2>Background Color</h2>
+    <p>This example shows how to set a background color for an element.</p>
+    <pre><code class="no-select">/* CSS */
+div {
+    background-color: #e0e0e0;
+    padding: 20px;
+}
+</code></pre>
+    <div class="example" style="background-color: #e0e0e0; padding: 20px;">
+      This div has a background color.
+    </div>
+  </div>
+
+  <div class="code-container">
+    <h2>Margin and Padding</h2>
+    <p>This example demonstrates how to set margins and padding for elements.</p>
+    <pre><code class="no-select">/* CSS */
+h2 {
+    margin-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #333;
+}
+</code></pre>
+    <h2 style="margin-top: 20px; padding-bottom: 10px; border-bottom: 2px solid #333;">
+      This heading has margin and padding applied.
+    </h2>
+  </div>
+
+  <div class="code-container">
+    <h2>Border</h2>
+    <p>This example shows how to add a border to an element.</p>
+    <pre><code class="no-select">/* CSS */
+.box {
+    border: 2px solid #007bff;
+    padding: 15px;
+}
+</code></pre>
+    <div class="box" style="border: 2px solid #007bff; padding: 15px;">
+      This box has a border.
+    </div>
+  </div>
+
+  <div class="code-container">
+    <h2>Flexbox Layout</h2>
+    <p>This example demonstrates a simple flexbox layout to align items horizontally.</p>
+    <pre><code class="no-select">/* CSS */
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item {
+    width: 100px;
+    height: 100px;
+    background-color: #f77f00;
+}
+</code></pre>
+    <div class="container" style="display: flex; justify-content: space-between;">
+      <div class="item" style="width: 100px; height: 100px; background-color: #f77f00;"></div>
+      <div class="item" style="width: 100px; height: 100px; background-color: #f77f00;"></div>
+      <div class="item" style="width: 100px; height: 100px; background-color: #f77f00;"></div>
+    </div>
+  </div>
+
+  <div class="code-container">
+    <h2>Hover Effect</h2>
+    <p>This example shows how to add a hover effect to an element.</p>
+    <pre><code class="no-select">/* CSS */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+</code></pre>
+    <button style="background-color: #007bff; color: white; border: none; padding: 10px 20px; cursor: pointer;"
+      onmouseover="this.style.backgroundColor='#0056b3'" onmouseout="this.style.backgroundColor='#007bff'">
+      Hover over me!
+    </button>
+  </div>
+
+  <h1>Basic C++ Code Examples</h1>
+
+  <div class="code-container">
+    <h2>Hello World</h2>
+    <p>This is the most basic C++ program that prints "Hello, World!" to the console.</p>
+    <pre><code class="no-select">#include &lt;iostream&gt;
+
+int main() {
+    std::cout &lt;&lt; "Hello, World!" &lt;&lt; std::endl;
+    return 0;
+}
+</code></pre>
+  </div>
+
+  <div class="code-container">
+    <h2>Basic Arithmetic</h2>
+    <p>Here are examples of basic arithmetic operations in C++.</p>
+    <pre><code class="no-select">#include &lt;iostream&gt;
+
+int main() {
+    int a = 5;
+    int b = 3;
+
+    // Addition
+    int sum = a + b;
+    std::cout &lt;&lt; "Sum: " &lt;&lt; sum &lt;&lt; std::endl;
+
+    // Multiplication
+    int product = a * b;
+    std::cout &lt;&lt; "Product: " &lt;&lt; product &lt;&lt; std::endl;
+
+    return 0;
+}
+</code></pre>
+  </div>
+
+  <div class="code-container">
+    <h2>Conditional Statements</h2>
+    <p>This code snippet demonstrates how to use conditional statements to check if a number is positive, negative, or
+      zero.</p>
+    <pre><code class="no-select">#include &lt;iostream&gt;
+
+int main() {
+    int number = 10;
+
+    if (number &gt; 0) {
+        std::cout &lt;&lt; "The number is positive." &lt;&lt; std::endl;
+    } else if (number &lt; 0) {
+        std::cout &lt;&lt; "The number is negative." &lt;&lt; std::endl;
+    } else {
+        std::cout &lt;&lt; "The number is zero." &lt;&lt; std::endl;
+    }
+
+    return 0;
+}
+</code></pre>
+  </div>
+
+  <div class="code-container">
+    <h2>Loops</h2>
+    <p>Examples of <code>for</code> and <code>while</code> loops in C++.</p>
+    <h3>For Loop</h3>
+    <pre><code class="no-select">#include &lt;iostream&gt;
+
+int main() {
+    for (int i = 0; i &lt; 5; i++) {
+        std::cout &lt;&lt; "Iteration: " &lt;&lt; i &lt;&lt; std::endl;
+    }
+
+    return 0;
+}
+</code></pre>
+
+    <h3>While Loop</h3>
+    <pre><code class="no-select">#include &lt;iostream&gt;
+
+int main() {
+    int count = 0;
+    while (count &lt; 5) {
+        std::cout &lt;&lt; "Count: " &lt;&lt; count &lt;&lt; std::endl;
+        count++;
+    }
+
+    return 0;
+}
+</code></pre>
+  </div>
+
+  <div class="code-container">
+    <h2>Functions</h2>
+    <p>Here's an example of a simple function that returns a greeting message.</p>
+    <pre><code class="no-select">#include &lt;iostream&gt;
+
+std::string greet(const std::string &name) {
+    return "Hello, " + name + "!";
+}
+
+int main() {
+    std::cout &lt;&lt; greet("Alice") &lt;&lt; std::endl;
+    return 0;
+}
+</code></pre>
+  </div>
+
+  <div class="code-container">
+    <h2>Arrays</h2>
+    <p>This example shows how to work with arrays in C++, including accessing elements and looping through the array.
+    </p>
+    <pre><code class="no-select">#include &lt;iostream&gt;
+
+int main() {
+    std::string fruits[] = {"apple", "banana", "cherry"};
+
+    // Accessing elements
+    std::cout &lt;&lt; fruits[0] &lt;&lt; std::endl;  // Outputs: apple
+
+    // Looping through an array
+    for (const auto &fruit : fruits) {
+        std::cout &lt;&lt; fruit &lt;&lt; std::endl;
+    }
+
+    return 0;
+}
+</code></pre>
+  </div>
+
+  <div class="code-container">
+    <h2>Maps (std::map)</h2>
+    <p>Here's how to use <code>std::map</code> in C++, including accessing values, adding new key-value pairs, and
+      looping through the map.</p>
+    <pre><code class="no-select">#include &lt;iostream&gt;
+#include &lt;map&gt;
+
+int main() {
+    std::map<std::string, int> person;
+    person["age"] = 30;
+    person["height"] = 180;
+
+    // Adding a new key-value pair
+    person["weight"] = 70;
+
+    // Looping through a map
+    for (const auto &pair : person) {
+        std::cout &lt;&lt; pair.first &lt;&lt; ": " &lt;&lt; pair.second &lt;&lt; std::endl;
+    }
+
+    return 0;
+}
+</code></pre>
+  </div>
 </body>
+
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Copy Paste Disabled</title>
+  <style>
+  /* Disable text selection */
+  body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  </style>
+  <script>
+  // Disable right-click context menu
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  });
+
+  // Disable Ctrl+C and other key combinations for copying
+  document.addEventListener('keydown', function(e) {
+    if (e.ctrlKey && (e.key === 'c' || e.key === 'x' || e.key === 'a')) {
+      e.preventDefault();
+    }
+  });
+  </script>
+</head>
+
+<body>
+  <h1>Content is Protected</h1>
+  <p>This text cannot be copied or pasted.</p>
+</body>
+
 </html>
