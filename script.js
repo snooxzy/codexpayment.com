@@ -1,4 +1,3 @@
-
 const messages = [
     "Are you sure?",
     "Really sure??",
